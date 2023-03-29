@@ -1,11 +1,15 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import TextBlock from './textBlock';
+import Header from './Header';
 import './App.css';
 
-function App() {
+function App()
+{
   return (
     <div className="App">
+     
       <Parallax pages={2} style={{ top: '0', left: '0' }} class="animation">
+    
         <ParallaxLayer offset={0} speed={0.25}>
           <div class="animation_layer parallax" id="artback"></div>
         </ParallaxLayer>
@@ -24,6 +28,9 @@ function App() {
         <ParallaxLayer offset={0} speed={0.5}>
           <div class="animation_layer parallax" id="jungle3"></div>
         </ParallaxLayer>
+        <ParallaxLayer offset={1} speed={0.45}>
+          <Header />
+        </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.45}>
           <div class="animation_layer parallax" id="jungle4"></div>
         </ParallaxLayer>
@@ -36,6 +43,7 @@ function App() {
         <ParallaxLayer offset={1} speed={0.25}>
           <TextBlock />
         </ParallaxLayer>
+        
       </Parallax>
     </div>
   );
